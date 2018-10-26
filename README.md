@@ -1,5 +1,5 @@
 # elFinder.themes
-Theme for elFinder >= 2.1.43
+
 <a href="https://github.com/johnfort/elFinder.themes/raw/master/Screenshorts/Main-view-icons.png" target="_blank"><img src="https://github.com/johnfort/elFinder.themes/raw/master/Screenshorts/Main-view-icons.png" width="256"/></a>
 <a href="https://github.com/johnfort/elFinder.themes/raw/master/Screenshorts/Main-view-list.png" target="_blank"><img src="https://github.com/johnfort/elFinder.themes/raw/master/Screenshorts/Main-view-list.png" width="256"/></a>
 <a href="https://github.com/johnfort/elFinder.themes/raw/master/Screenshorts/Contextmenu.png" target="_blank"><img src="https://github.com/johnfort/elFinder.themes/raw/master/Screenshorts/Contextmenu.png" width="256"/></a>
