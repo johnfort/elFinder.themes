@@ -317,7 +317,6 @@
 	cursor: pointer;
 }
 .elfinder .elfinder-toolbar .elfinder-button-text{
-	top: -3.5px;
 	margin: 0 0 0 4px;
 }
 .elfinder .elfinder-toolbar .elfinder-button-search{
@@ -986,6 +985,9 @@
 	background: none;
 	text-indent: 0;
 }
+.elfinder .elfinder-toolbar .elfinder-buttonset .elfinder-button-icon{
+	float: left;
+}
 .elfinder-rtl .elfinder-button-menu-item .ui-icon{
 	left: auto;
 	right: 2px;
@@ -998,7 +1000,6 @@
 	display: none;
 }
 .elfinder-button-menu-item-selected .ui-icon,
-.elfinder .elfinder-navbar .elfinder-tree .elfinder-spinner,
 .elfinder .elfinder-quicklook-fullscreen .elfinder-quicklook-navbar-icon-close{
 	display: flex;
 }
@@ -1006,13 +1007,16 @@
 .elfinder-button-menu-item-selected-asc .ui-icon-arrowthick-1-s{
 	display: none;
 }
+.elfinder .elfinder-navbar .elfinder-tree .elfinder-spinner{
+	margin: -10px 0 0;
+}
 .elfinder-ltr .elfinder-navbar-icon{
 	left: 15px;
 }
 .elfinder-rtl .elfinder-navbar-icon{
 	right: 15px;
 }
-.elfinder .elfinder-spinner{ /* TODO: Delete later */
+.elfinder .elfinder-spinner{
 	display: inline-block;
 	float: none;
 	vertical-align: text-top;
