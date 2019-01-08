@@ -189,12 +189,13 @@
 	-webkit-appearance: none !important;
 	appearance: none !important;
 	display: inline-block;
+	position: relative;
 	margin: 0 !important;
 	padding: 2px 3px !important; /* input, select, textarea */
 	vertical-align: middle;
 	font-weight: normal !important;
-	color: #1f1f1f !important; /* input, select, textarea */
-	background: #999 !important; /* input, select, textarea */
+	color: #999 !important; /* input, select, textarea */
+	background: #222 !important; /* input, select, textarea */
 }
 .elfinder input,
 .elfinder .elfinder-dialog-upload .ui-button,
@@ -227,13 +228,13 @@
 .elfinder textarea{
 	overflow: auto;
 }
+.elfinder input[type="radio"],
 .elfinder input[type="checkbox"]{
-	margin-right: 2px !important;
+	margin: 2px !important;
 	width: 16px !important;
 	height: 16px !important;
-	border: 3.5px solid #bbb !important;
-	background: #999 !important;
-	vertical-align: text-top;
+	vertical-align: text-top !important;
+	cursor: pointer !important;
 }
 .elfinder button:hover,
 .elfinder input[type="button"]:hover,
@@ -249,27 +250,41 @@
 .elfinder .elfinder-resize-preset-container .ui-button:focus{
 	background: #1f1f1f !important;
 }
+.elfinder input:focus,
+.elfinder select:focus,
+.elfinder textarea:focus{
+	background: #292929 !important;
+}
 .elfinder button:active,
 .elfinder input[type="button"]:active,
 .elfinder input[type="reset"]:active,
 .elfinder input[type="submit"]:active,
+.elfinder input[type="checkbox"]:active,
+.elfinder input[type="radio"]:active,
 .elfinder .elfinder-dialog-upload .ui-button:active,
 .elfinder .elfinder-resize-preset-container .ui-button:active{
 	-webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, .2) !important;
 	-moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, .2) !important;
 	box-shadow: inset 0 2px 4px rgba(0, 0, 0, .2) !important;
 }
-.elfinder input:focus,
-.elfinder select:focus,
-.elfinder textarea:focus{
-	background: #c8c8c8 !important;
+.elfinder input[type="radio"]:checked{
+	border: 3.5px solid #3e3e3e;
+	background: #999;
 }
-.elfinder input[type="checkbox"]:focus{
-	border: 3.5px solid #bbb !important;
-}
-.elfinder input[type="checkbox"]:active,
-.elfinder input[type="checkbox"]:checked{
-	background: #111 !important;
+.elfinder input[type="checkbox"]:checked:before{
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: 7px;
+	display: table;
+	width: 5px;
+	height: 14px;
+	border: 2px solid #999;
+	border-top: 0;
+	border-left: 0;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 .elfinder button::-moz-focus-inner,
 .elfinder input::-moz-focus-inner{
@@ -711,6 +726,9 @@
 }
 .elfinder .elfinder-dialog .elfinder-preference dl{
 	margin: 0;
+}
+.elfinder .elfinder-preference dd label{
+	margin: 3px;
 }
 /* dialog: notify/error/confirm */
 .elfinder .elfinder-dialog-notify .elfinder-notify{
