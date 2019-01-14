@@ -3,6 +3,7 @@
  * Not supported MS IE!
  *
  * @author	John Fort
+ * @date 	14.01.2019
  * @link 	https://github.com/johnfort/elFinder.themes
  **/
 
@@ -137,14 +138,15 @@
 .elfinder .ui-tabs .ui-tabs-panel{
 	padding: 10px;
 }
-.elfinder .ui-controlgroup .ui-widget{
+.elfinder .ui-checkboxradio-label{
 	background: #292929;
 }
-.elfinder-rtl .ui-controlgroup .ui-widget{
+.elfinder-rtl .ui-checkboxradio-label .ui-widget{
 	float: right;
 }
-.elfinder .ui-controlgroup .ui-widget.ui-state-active,
-.elfinder .ui-controlgroup .ui-widget:hover{
+.elfinder .ui-checkboxradio-label.ui-state-active,
+.elfinder .ui-checkboxradio-label.ui-controlgroup-item:hover,
+.elfinder .ui-checkboxradio-label.ui-checkboxradio-radio-label:hover{
 	background: #202020;
 }
 .elfinder .ui-slider-horizontal.ui-widget.ui-widget-content{
@@ -189,7 +191,6 @@
 	-webkit-appearance: none !important;
 	appearance: none !important;
 	display: inline-block;
-	position: relative;
 	margin: 0 !important;
 	padding: 2px 3px !important; /* input, select, textarea */
 	vertical-align: middle;
@@ -236,6 +237,12 @@
 	vertical-align: text-top !important;
 	cursor: pointer !important;
 }
+.elfinder input[type="checkbox"]{
+	position: relative;
+}
+input[type="radio"]{
+	border-radius: 50% !important;
+}
 .elfinder button:hover,
 .elfinder input[type="button"]:hover,
 .elfinder input[type="reset"]:hover,
@@ -268,8 +275,8 @@
 	box-shadow: inset 0 2px 4px rgba(0, 0, 0, .2) !important;
 }
 .elfinder input[type="radio"]:checked{
-	border: 3.5px solid #3e3e3e;
-	background: #999;
+	border: 4.5px solid #222 !important;
+	background: #999 !important;
 }
 .elfinder input[type="checkbox"]:checked:before{
 	content: '';
@@ -823,6 +830,10 @@
 .elfinder-rtl .elfinder-dialog-edit .ui-dialog-buttonpane .elfinder-edit-extras{
 	float: right;
 }
+/* batch rename */
+.elfinder .elfinder-rename-batch-preview{
+	min-height: unset;
+}
 /* quicklook */
 .elfinder .elfinder-quicklook{
 	padding: 0;
@@ -1019,7 +1030,7 @@
 	right: 2px;
 }
 .elfinder-button-menu-item .ui-icon,
-.elfinder-button-search-menu .ui-checkboxradio-icon,
+.elfinder .ui-checkboxradio-icon,
 .elfinder .elfinder-quicklook-navbar .elfinder-quicklook-navbar-icon-close,
 .elfinder .ui-resizable-disabled .ui-resizable-handle,
 .elfinder .ui-resizable-autohide .ui-resizable-handle{
