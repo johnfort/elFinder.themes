@@ -3,7 +3,7 @@
  * Not supported MS IE!
  *
  * @author	John Fort
- * @date 	14.01.2019
+ * @date 	15.01.2019
  * @link 	https://github.com/johnfort/elFinder.themes
  **/
 
@@ -640,6 +640,16 @@ input[type="radio"]{
 /*************************************/
 /*				DIALOGS 			 */
 /*************************************/
+.dialogelfinder .dialogelfinder-drag {
+	font-size: 85%;
+}
+.dialogelfinder .dialogelfinder-drag-close{
+	position: relative;
+	top: 6px;
+	right: 6px;
+	float: right;
+	margin: 0;
+}
 .elfinder .elfinder-dialog{
 	background: #333;
 }
@@ -682,6 +692,7 @@ input[type="radio"]{
 .elfinder .elfinder-dialog .elfinder-titlebar-button:hover{
 	color: #ccc;
 }
+.dialogelfinder .dialogelfinder-drag-close:hover,
 .elfinder .elfinder-dialog .ui-dialog-titlebar-close:hover{
 	color: #c32020;
 }
@@ -1137,7 +1148,7 @@ input[type="radio"]{
 /* jquery-ui icons */
 .elfinder .ui-icon-close:before{ content: '\e84c'; }
 .elfinder .ui-icon-closethick:before,
-.elfinder .elfinder-notify-cancel button:before{ content: '\e850'; font-size: 130%; }
+.elfinder .elfinder-notify-cancel button:before{ content: '\e81b'; font-size: 90%; }
 .elfinder .ui-icon-check:before{ content: '\e80f'; }
 .elfinder .ui-icon-caret-1-n:before{ content: '\e837'; }
 .elfinder .ui-icon-caret-1-s:before{ content: '\e836'; }
@@ -1149,7 +1160,7 @@ input[type="radio"]{
 .elfinder .ui-icon-gripsmall-diagonal-se:before{ content: '\e803'; }
 .elfinder .ui-icon-plusthick:before{ content: '\e802'; }
 .elfinder .ui-icon-arrowreturnthick-1-s:before{ content: '\e806'; }
-.elfinder .ui-icon-minusthick:before{ content: '\f2d1'; font-size: 90%; }
+.elfinder .ui-icon-minusthick:before{ content: '\e81e'; }
 .elfinder .ui-icon-pin-s:before{ content: '\e811'; }
 .elfinder .ui-icon-arrowrefresh-1-n:before{ content: '\e81f'; }
 .elfinder .ui-icon-unlocked:before{ content: '\e854'; }
@@ -1375,8 +1386,8 @@ input[type="radio"]{
 }
 .elfinder .elfinder-cwd-wrapper .elfinder-cwd-parent .elfinder-cwd-icon:after{ content: '\e847'; color: #999; }
 /* quicklook */
-.elfinder-quicklook-navbar-icon-prev:before{ content: '\f007'; }
-.elfinder-quicklook-navbar-icon-next:before{ content: '\f006'; }
+.elfinder-quicklook-navbar-icon-prev:before{ content: '\e850'; }
+.elfinder-quicklook-navbar-icon-next:before{ content: '\e82c'; }
 .elfinder-quicklook-navbar-icon-fullscreen:before{ content: '\e802'; }
 .elfinder-quicklook-navbar-icon-fullscreen-off:before{ content: '\e806'; }
-.elfinder-quicklook-navbar-icon-close:before{ content: '\e818'; font-size: 85%; }
+.elfinder-quicklook-navbar-icon-close:before{ content: '\e81b'; font-size: 85%; }
