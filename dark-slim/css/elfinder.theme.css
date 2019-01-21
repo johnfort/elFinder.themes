@@ -3,7 +3,7 @@
  * Not supported MS IE!
  *
  * @author	John Fort
- * @date 	15.01.2019
+ * @date 	21.01.2019
  * @link 	https://github.com/johnfort/elFinder.themes
  **/
 
@@ -12,20 +12,21 @@
 /*************************************/
 /* Hard reset main rules */
 .elfinder{
-	font-family: 'Verdana', 'Tahoma', 'Arial', 'Helvetica', 'sans-serif';
 	font-size: 19px;
 }
 .elfinder-mobile{
-	font-family: 'Tahoma', 'Arial', 'Helvetica', 'sans-serif', 'Verdana';
 	font-size: 18px;
 }
 .elfinder,
 .elfinder *{
+	font-family: 'Trebuchet MS', 'Tahoma', 'Arial', 'Verdana', 'Helvetica', 'sans-serif';
 	outline: 0 !important;
 	border: 0 !important;
 	-webkit-border-radius: 0 !important;
 	-moz-border-radius: 0 !important;
 	border-radius: 0 !important;
+}
+.elfinder *{
 	-webkit-box-shadow: none !important;
 	-moz-box-shadow: none !important;
 	box-shadow: none !important;
@@ -65,9 +66,6 @@
 	text-decoration: underline;
 }
 /* Reset jquery-ui rules in elfinder container */
-.elfinder .ui-widget{
-	font-family: 'Tahoma', 'Arial', 'Helvetica', 'sans-serif', 'Verdana';
-}
 .elfinder,
 .elfinder .ui-widget,
 .elfinder .ui-widget-header,
@@ -78,7 +76,7 @@
 .elfinder,
 .elfinder .ui-widget,
 .elfinder .ui-widget-header{
-	background: #1f1f1f;
+	background: #1d1d1d;
 }
 .elfinder .ui-widget-header{
 	padding: .4em .2em .4em .7em;
@@ -88,7 +86,7 @@
 	padding: .4em .7em .4em .2em;
 }
 .elfinder .ui-widget-content{
-	background: #333;
+	background: #292929;
 }
 .elfinder .ui-state-default{
 	background: none;
@@ -103,7 +101,7 @@
 .elfinder .ui-state-active:hover,
 .elfinder .ui-state-active:focus{
 	color: #ccc;
-	background: #292929;
+	background: #4e4e4e;
 }
 .ui-selectable-helper{
 	border: 1px dashed #666;
@@ -111,35 +109,37 @@
 }
 .elfinder .ui-tabs-nav{
 	padding: 0;
-	background: #272727;
+}
+.elfinder-rtl .ui-tabs-nav li{
+	float: right;
 }
 .elfinder .ui-tabs-nav li.ui-state-default{
 	margin: 0;
 	padding: 0;
 	font-weight: normal;
-	background: #2a2a2a;
+	background: #222;
 }
-.elfinder-rtl .ui-tabs-nav li{
-	float: right;
+.elfinder .ui-tabs-nav li.ui-state-default a{
+	padding: 6px 10px !important;
+	color: #666;
+	text-decoration: underline;
 }
-.elfinder .ui-tabs-nav li .ui-state-hover,
-.elfinder .ui-tabs-nav li.ui-state-hover,
+.elfinder .ui-tabs-nav li.ui-state-hover a{
+	color: #999;
+}
 .elfinder .ui-tabs-nav li.ui-state-active{
-	background: #333;
+	background: #292929;
 }
-.elfinder .ui-tabs-nav .ui-state-default a{
+.elfinder .ui-tabs-nav li.ui-state-active a{
 	color: #999;
 	text-decoration: none;
-}
-.elfinder .ui-tabs-nav .ui-state-active a{
-	color: #ccc;
-	text-decoration: none;
+	cursor: default !important;
 }
 .elfinder .ui-tabs .ui-tabs-panel{
 	padding: 10px;
 }
 .elfinder .ui-checkboxradio-label{
-	background: #292929;
+	background: #444 !important;
 }
 .elfinder-rtl .ui-checkboxradio-label .ui-widget{
 	float: right;
@@ -147,19 +147,16 @@
 .elfinder .ui-checkboxradio-label.ui-state-active,
 .elfinder .ui-checkboxradio-label.ui-controlgroup-item:hover,
 .elfinder .ui-checkboxradio-label.ui-checkboxradio-radio-label:hover{
-	background: #202020;
+	background: #333 !important;
 }
 .elfinder .ui-slider-horizontal.ui-widget.ui-widget-content{
 	margin: 0 8px;
 	padding: 0;
-	background: #999;
+	background: #3e3e3e;
 }
 .elfinder .ui-slider-horizontal .ui-slider-handle{
 	top: -.22em;
-	background: #292929;
-}
-.elfinder .ui-slider-horizontal .ui-slider-handle.ui-state-hover{
-	background: #1f1f1f;
+	background: #4e4e4e;
 }
 /* Reset form elements with jquery-ui */
 .elfinder legend,
@@ -194,9 +191,10 @@
 	margin: 0 !important;
 	padding: 2px 3px !important; /* input, select, textarea */
 	vertical-align: middle;
+	font-size: 13px !important;
 	font-weight: normal !important;
 	color: #999 !important; /* input, select, textarea */
-	background: #222 !important; /* input, select, textarea */
+	background: #3e3e3e !important; /* input, select, textarea */
 }
 .elfinder input,
 .elfinder .elfinder-dialog-upload .ui-button,
@@ -211,11 +209,10 @@
 .elfinder .elfinder-resize-preset-container .ui-button{
 	padding: 4px 12px !important;
 	height: 28px !important;
-	font-family: 'Tahoma', 'Arial', 'Helvetica', 'sans-serif';
 	color: #999 !important;
-	background: #292929 !important;
+	background: #444 !important;
 	text-align: center !important;
-	box-sizing: border-box;
+	box-sizing: border-box !important;
 	-webkit-user-select: none !important;
 	-moz-user-select: none !important;
 	user-select: none !important;
@@ -234,7 +231,7 @@
 	margin: 2px !important;
 	width: 16px !important;
 	height: 16px !important;
-	vertical-align: text-top !important;
+	vertical-align: middle !important;
 	cursor: pointer !important;
 }
 .elfinder input[type="checkbox"]{
@@ -242,6 +239,20 @@
 }
 input[type="radio"]{
 	border-radius: 50% !important;
+}
+.elfinder input[disabled],
+.elfinder button[disabled],
+.elfinder select[disabled],
+.elfinder textarea[disabled],
+.elfinder input[readonly],
+.elfinder textarea[readonly]{
+	pointer-events: none;
+	cursor: not-allowed !important;
+	color: #888;
+	-webkit-box-shadow: inset 1px 2px 3px rgba(0, 0, 0, .1);
+	-moz-box-shadow: inset 1px 2px 3px rgba(0, 0, 0, .1);
+	box-shadow: inset 1px 2px 3px rgba(0, 0, 0, .1);
+	opacity: .4;
 }
 .elfinder button:hover,
 .elfinder input[type="button"]:hover,
@@ -255,12 +266,18 @@ input[type="radio"]{
 .elfinder input[type="submit"]:focus,
 .elfinder .elfinder-dialog-upload .ui-button:focus,
 .elfinder .elfinder-resize-preset-container .ui-button:focus{
-	background: #1f1f1f !important;
+	background: #333 !important;
+}
+.elfinder button[disabled]:hover,
+.elfinder input[disabled][type="button"]:hover,
+.elfinder input[disabled][type="reset"]:hover,
+.elfinder input[disabled][type="submit"]:hover{
+	background: #444 !important;
 }
 .elfinder input:focus,
 .elfinder select:focus,
 .elfinder textarea:focus{
-	background: #292929 !important;
+	background: #4e4e4e !important;
 }
 .elfinder button:active,
 .elfinder input[type="button"]:active,
@@ -275,8 +292,8 @@ input[type="radio"]{
 	box-shadow: inset 0 2px 4px rgba(0, 0, 0, .2) !important;
 }
 .elfinder input[type="radio"]:checked{
-	border: 4.5px solid #222 !important;
-	background: #999 !important;
+	border: 4px solid #3e3e3e !important;
+    background: #888 !important;
 }
 .elfinder input[type="checkbox"]:checked:before{
 	content: '';
@@ -343,11 +360,17 @@ input[type="radio"]{
 	margin: 1px 5px;
 	background: transparent;
 }
+.elfinder .elfinder-toolbar .elfinder-buttonset .elfinder-button.ui-state-hover{
+	background: none;
+}
 .elfinder .elfinder-toolbar .elfinder-button{
 	cursor: pointer;
 }
 .elfinder .elfinder-toolbar .elfinder-button-text{
 	margin: 0 0 0 4px;
+}
+.elfinder .elfinder-toolbar .elfinder-button-menu.elfinder-button-search-menu{
+	background: #292929;
 }
 .elfinder .elfinder-toolbar .elfinder-button-search{
 	margin: 1px 5px;
@@ -371,9 +394,6 @@ input[type="radio"]{
 .elfinder .elfinder-toolbar .elfinder-button-search .ui-icon{
 	margin: -9px 4px 0 4px;
 }
-.elfinder .elfinder-button-menu-item-separated{
-	border-top: .5px solid #404040 !important;
-}
 .elfinder-toolbar-swipe-handle{
 	height: 40px;
 	background: linear-gradient(to top, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 0) 100%);
@@ -394,6 +414,9 @@ input[type="radio"]{
 /*************************************/
 .elfinder .elfinder-workzone{
 	background: #333;
+}
+.elfinder .elfinder-workzone *{
+	font-family: 'Verdana', 'Tahoma', 'Arial';
 }
 .elfinder .elfinder-workzone .elfinder-cwd-wrapper-trash .elfinder-cwd-message-board{ /* Trash */
 	background-image: linear-gradient(45deg, #00000008 25%, transparent 25%, transparent 75%, #00000008 75%, #00000008), linear-gradient(45deg, #00000008 25%, transparent 25%, transparent 75%, #00000008 75%, #00000008);
@@ -592,7 +615,7 @@ input[type="radio"]{
 }
 .elfinder .elfinder-navdock .elfinder-quicklook-titlebar{
 	position: absolute;
-	background: rgba(31, 31, 31, .88);
+	background: #1d1d1d;
 	z-index: 1;
 }
 .elfinder-ltr .elfinder-navdock .elfinder-quicklook-title{
@@ -611,7 +634,6 @@ input[type="radio"]{
 /*			CONTEXTMENU				 */
 /*************************************/
 .elfinder .elfinder-contextmenu-header{
-	color: #555;
 	font-size: 0.8em;
 }
 .elfinder .elfinder-contextmenu-header span{
@@ -620,15 +642,15 @@ input[type="radio"]{
 }
 .elfinder .elfinder-contextmenu,
 .elfinder .elfinder-contextmenu-sub{
-	background: #333;
 	color: #999;
+	background: #3e3e3e;
 }
 .elfinder .elfinder-contextmenu-item{
 	padding: 5px 30px;
 }
 .elfinder .elfinder-contextmenu-separator{
 	height: 0;
-	border-top: .5px solid #404040 !important;
+	border-top: 1px solid rgba(153, 153, 153, .1) !important;
 }
 .elfinder .elfinder-contextmenu-extra-icon a,
 .elfinder .elfinder-contextmenu-extra-icon span{
@@ -636,11 +658,21 @@ input[type="radio"]{
 	z-index: 1;
 }
 
+/*************************************/
+/*			BUTTON MENU				 */
+/*************************************/
+.elfinder .elfinder-button-menu{
+	background: #3e3e3e;
+}
+.elfinder .elfinder-button-menu-item-separated{
+	border-top: 1px solid rgba(153, 153, 153, .1) !important;
+}
+
 
 /*************************************/
 /*				DIALOGS 			 */
 /*************************************/
-.dialogelfinder .dialogelfinder-drag {
+.dialogelfinder .dialogelfinder-drag{
 	font-size: 85%;
 }
 .dialogelfinder .dialogelfinder-drag-close{
@@ -688,6 +720,7 @@ input[type="radio"]{
 .elfinder .elfinder-dialog .elfinder-titlebar-button .ui-icon{
 	height: 16px;
 	width: 16px;
+	opacity: 1;
 }
 .elfinder .elfinder-dialog .elfinder-titlebar-button:hover{
 	color: #ccc;
@@ -709,7 +742,7 @@ input[type="radio"]{
 /* bottom buttons */
 .elfinder .elfinder-dialog .ui-dialog-buttonpane{
 	padding: .5em;
-	border-top: .5px solid #3a3a3a !important;
+	border-top: 1px solid #3e3e3e !important;
 }
 .elfinder .elfinder-dialog .ui-dialog-buttonpane .ui-dialog-buttonset .ui-button{
 	margin: 0 0 0 .4em !important;
@@ -731,8 +764,6 @@ input[type="radio"]{
 	margin: 0;
 }
 .elfinder .elfinder-dialog .elfinder-help .elfinder-help-logo{
-	opacity: .8;
-	filter: grayscale(1);
 	background: url('data:image/png;base64,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') center center no-repeat;
 }
 .elfinder .elfinder-dialog .elfinder-help .elfinder-help-team{
@@ -750,7 +781,7 @@ input[type="radio"]{
 }
 /* dialog: notify/error/confirm */
 .elfinder .elfinder-dialog-notify .elfinder-notify{
-	border-bottom: .5px solid #3a3a3a !important;
+	border-bottom: .5px solid #3e3e3e !important;
 }
 .elfinder .elfinder-dialog-notify .elfinder-notify:last-child{
 	border: 0 !important;
@@ -848,7 +879,7 @@ input[type="radio"]{
 /* quicklook */
 .elfinder .elfinder-quicklook{
 	padding: 0;
-	background: #1f1f1f;
+	background: #1d1d1d;
 }
 .elfinder .elfinder-quicklook-titlebar{
 	position: relative;
@@ -875,6 +906,7 @@ input[type="radio"]{
 	margin: 0;
 	padding: 0 .4em 0 0;
 	height: 100%;
+	opacity: 1;
 }
 .elfinder-rtl .elfinder-quicklook .elfinder-quicklook-titlebar-icon .ui-icon{
 	float: left;
@@ -1131,8 +1163,8 @@ input[type="radio"]{
 	top: 2px;
 	left: -4px;
 	padding: 2px 4px;
+	font-family: 'Trebuchet MS';
 	font-weight: bold;
-	font-family: 'Trebuchet MS', 'Tahoma', 'Arial', 'Verdana';
 	color: #999;
 	background-color: #202020;
 	box-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
@@ -1149,7 +1181,7 @@ input[type="radio"]{
 .elfinder .ui-icon-close:before{ content: '\e84c'; }
 .elfinder .ui-icon-closethick:before,
 .elfinder .elfinder-notify-cancel button:before{ content: '\e81b'; font-size: 90%; }
-.elfinder .ui-icon-check:before{ content: '\e80f'; }
+.elfinder .ui-icon-check:before{ content: '\e80f'; font-size: 110%; }
 .elfinder .ui-icon-caret-1-n:before{ content: '\e837'; }
 .elfinder .ui-icon-caret-1-s:before{ content: '\e836'; }
 .elfinder .ui-icon-search:before{ content: '\e81a'; }
