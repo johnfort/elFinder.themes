@@ -1,9 +1,9 @@
 /**
- * Dark Slim theme for elFinder 2.1.47 or newer.
+ * Dark Slim theme for elFinder 2.1.46.
  * Not supported MS IE!
  *
  * @author	John Fort
- * @date 	15.12.2020
+ * @date 	14.12.2020
  * @link 	https://github.com/johnfort/elFinder.themes
  **/
 
@@ -369,9 +369,6 @@ input[type="radio"]{
 .elfinder .elfinder-toolbar .elfinder-button-text{
 	margin: 0 0 0 4px;
 }
-.elfinder-rtl.elfinder-touch .elfinder-toolbar .elfinder-button-text{
-	margin: 0 4px 0 0;
-}
 .elfinder .elfinder-toolbar .elfinder-button-menu.elfinder-button-search-menu{
 	background: #292929;
 }
@@ -394,6 +391,13 @@ input[type="radio"]{
 .elfinder-touch .elfinder-toolbar .elfinder-button-search input{
 	padding: 0 24px !important;
 	height: 28px !important;
+}
+.elfinder .elfinder-toolbar .elfinder-button-search .ui-icon{
+	margin: -9px 4px 0 4px;
+}
+.elfinder-touch .elfinder-toolbar .elfinder-button-search .ui-icon{
+	margin: -9px 3px 0 3px;
+	zoom: 1.15;
 }
 .elfinder-toolbar-swipe-handle{
 	height: 40px;
@@ -648,9 +652,6 @@ input[type="radio"]{
 }
 .elfinder .elfinder-contextmenu-item{
 	padding: 5px 30px;
-}
-.elfinder-touch .elfinder-contextmenu-item{
-	padding: 8px 30px;
 }
 .elfinder .elfinder-contextmenu-separator{
 	height: 0;
@@ -1074,19 +1075,6 @@ input[type="radio"]{
 .elfinder .elfinder-toolbar .elfinder-buttonset .elfinder-button-icon{
 	float: left;
 }
-.elfinder-rtl .elfinder-toolbar .elfinder-buttonset .elfinder-button-icon{
-	float: right;
-}
-.elfinder .elfinder-toolbar .elfinder-button-search .ui-icon{
-	margin: -9px 4px 0 4px;
-}
-.elfinder-ltr.elfinder-touch .elfinder-toolbar .elfinder-button-search .ui-icon,
-.elfinder-touch .elfinder-toolbar .elfinder-button-search .ui-icon-close{
-	transform: scale(1.25);
-}
-.elfinder-rtl.elfinder-touch .elfinder-toolbar .elfinder-button-search .ui-icon-search{
-	transform: scale(-1.25, 1.25);
-}
 .elfinder-rtl .elfinder-button-menu-item .ui-icon{
 	left: auto;
 	right: 2px;
@@ -1105,9 +1093,6 @@ input[type="radio"]{
 .elfinder-button-menu-item-selected-desc .ui-icon-arrowthick-1-n,
 .elfinder-button-menu-item-selected-asc .ui-icon-arrowthick-1-s{
 	display: none;
-}
-.elfinder-touch .elfinder-button-icon.elfinder-contextmenu-extra-icon{
-	transform: scale(1.25);
 }
 .elfinder .elfinder-navbar .elfinder-tree .elfinder-spinner{
 	margin: -10px 0 0;
