@@ -1,9 +1,9 @@
 /**
- * Dark Slim theme for elFinder 2.1.49 or newer.
+ * Dark Slim theme for elFinder 2.1.47 or newer.
  * Not supported MS IE!
  *
  * @author	John Fort
- * @date 	16.12.2020
+ * @date 	15.12.2020
  * @link 	https://github.com/johnfort/elFinder.themes
  **/
 
@@ -11,13 +11,13 @@
 /*				MAIN				 */
 /*************************************/
 /* Hard reset main rules */
-div.elfinder{
+.elfinder{
 	font-size: 19px;
 }
 .elfinder-mobile{
 	font-size: 18px;
 }
-div.elfinder,
+.elfinder,
 .elfinder *{
 	font-family: 'Trebuchet MS', 'Tahoma', 'Arial', 'Verdana', 'Helvetica', 'sans-serif';
 	outline: 0 !important;
@@ -66,14 +66,14 @@ div.elfinder,
 	text-decoration: underline;
 }
 /* Reset jquery-ui rules in elfinder container */
-div.elfinder,
+.elfinder,
 .elfinder .ui-widget,
 .elfinder .ui-widget-header,
 .elfinder .ui-widget-content,
 .elfinder .ui-state-default{
 	color: #999;
 }
-div.elfinder,
+.elfinder,
 .elfinder .ui-widget,
 .elfinder .ui-widget-header{
 	background: #1d1d1d;
