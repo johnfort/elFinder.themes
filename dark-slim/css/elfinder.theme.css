@@ -3,7 +3,7 @@
  * Not supported MS IE!
  *
  * @author	John Fort
- * @date 	16.12.2020
+ * @date 	18.12.2020
  * @link 	https://github.com/johnfort/elFinder.themes
  **/
 
@@ -22,9 +22,9 @@ div.elfinder,
 	font-family: 'Trebuchet MS', 'Tahoma', 'Arial', 'Verdana', 'Helvetica', 'sans-serif';
 	outline: 0 !important;
 	border: 0 !important;
-	-webkit-border-radius: 0 !important;
+	-webkit-border-radius: 0.001px !important;
 	-moz-border-radius: 0 !important;
-	border-radius: 0 !important;
+	border-radius: 0.001px !important; /* Fix (must be > 0) for 'select' elem in 'Opera' browser */
 }
 .elfinder *{
 	-webkit-box-shadow: none !important;
@@ -168,15 +168,15 @@ div.elfinder,
 	background: none;
 }
 .elfinder fieldset{
-	margin: 0;
-	padding: 2px 10px 10px;
+	margin: 0 !important;
+	padding: 2px 10px 10px !important;
 	border: 1px solid #444 !important;
 	border-radius: 8px !important;
-	background: transparent;
+	background: transparent !important;
 }
 .elfinder legend{
-	margin: 0 auto;
-	padding: 2px 4px 2px;
+	margin: 0 auto !important;
+	padding: 2px 4px 2px !important;
 }
 .elfinder input,
 .elfinder button,
@@ -195,11 +195,12 @@ div.elfinder,
 	font-weight: normal !important;
 	color: #999 !important; /* input, select, textarea */
 	background: #3e3e3e !important; /* input, select, textarea */
+	box-sizing: border-box !important;
 }
 .elfinder input,
 .elfinder .elfinder-dialog-upload .ui-button,
 .elfinder .elfinder-resize-preset-container .ui-button{
-	height: 24px !important;
+	height: 28px !important;
 }
 .elfinder button,
 .elfinder input[type="button"],
@@ -212,7 +213,6 @@ div.elfinder,
 	color: #999 !important;
 	background: #444 !important;
 	text-align: center !important;
-	box-sizing: border-box !important;
 	-webkit-user-select: none !important;
 	-moz-user-select: none !important;
 	user-select: none !important;
@@ -381,7 +381,7 @@ input[type="radio"]{
 	background: transparent;
 }
 .elfinder .elfinder-toolbar .elfinder-button-search input{
-	height: 24px;
+	height: 24px !important;
 	padding: 0 22px !important;
 	color: #999 !important;
 	background: #1b1b1b !important;
@@ -855,7 +855,7 @@ input[type="radio"]{
 .elfinder .elfinder-dialog .elfinder-info-tb{
 	margin: 0;
 }
-.elfinder .elfinder-dialog .elfinder-info-tb span{ /* TODO: Delete later */
+.elfinder .elfinder-dialog .elfinder-info-tb span{ /* md5/sha256: Calculate */
 	float: none;
 }
 /* upload */
@@ -881,6 +881,10 @@ input[type="radio"]{
 /* batch rename */
 .elfinder .elfinder-rename-batch-preview{
 	min-height: unset;
+}
+/* chmod */
+.elfinder .elfinder-dialog-chmod table{
+	margin-bottom: 10px;
 }
 /* quicklook */
 .elfinder .elfinder-quicklook{
@@ -935,6 +939,8 @@ input[type="radio"]{
 	background: #333;
 }
 .elfinder .elfinder-quicklook-preview .elfinder-quicklook-preview-text-wrapper,
+.elfinder .elfinder-quicklook-preview .elfinder-quicklook-preview-text-wrapper pre.elfinder-quicklook-preview-text,
+.elfinder .elfinder-quicklook-preview .elfinder-quicklook-preview-text-wrapper pre.elfinder-quicklook-preview-text.prettyprint,
 .elfinder .elfinder-quicklook-preview .elfinder-quicklook-preview-archive-wrapper,
 .elfinder .elfinder-quicklook-preview .elfinder-quicklook-preview-html,
 .elfinder .elfinder-quicklook-preview .elfinder-quicklook-preview-pdf,
@@ -966,9 +972,11 @@ input[type="radio"]{
 .elfinder .elfinder-resize-container{
 	margin: 0;
 }
+.elfinder .elfinder-resize-container fieldset.elfinder-resize-preset-container{
+	box-sizing: border-box; /* TODO: del if > 2.1.51 */
+}
 .elfinder .elfinder-resize-container fieldset .ui-button{
 	width: 49%;
-	box-sizing: border-box;
 }
 .elfinder .elfinder-resize-container .elfinder-resize-rotate-slider{
 	width: 204px;

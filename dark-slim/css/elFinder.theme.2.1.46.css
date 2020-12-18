@@ -22,9 +22,9 @@
 	font-family: 'Trebuchet MS', 'Tahoma', 'Arial', 'Verdana', 'Helvetica', 'sans-serif';
 	outline: 0 !important;
 	border: 0 !important;
-	-webkit-border-radius: 0 !important;
+	-webkit-border-radius: 0.001px !important;
 	-moz-border-radius: 0 !important;
-	border-radius: 0 !important;
+	border-radius: 0.001px !important; /* Fix (must be > 0) for 'select' elem in 'Opera' browser */
 }
 .elfinder *{
 	-webkit-box-shadow: none !important;
